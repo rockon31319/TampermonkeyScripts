@@ -16,7 +16,7 @@ export const getCopyrightAndVersionElement = (): HTMLAnchorElement => {
     copyRightLink.style.textAlign = 'right';
     copyRightLink.style.padding = '0.25rem 0';
     copyRightLink.title = UPDATE_LOGS.slice(0, 5).map(stringifyUpdateLog).join('\n');
-    copyRightLink.href = 'https://github.com/kenny0960/TampermonkeyScripts/tree/master/src/werp';
+    copyRightLink.href = 'https://github.com/rockon31319/TampermonkeyScripts/tree/master/src/werp';
     copyRightLink.target = '_blank';
     return copyRightLink;
 };

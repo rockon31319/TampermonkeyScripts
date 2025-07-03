@@ -6,10 +6,10 @@
 
 ### step 2-1:
 
-1. 取得 [LINE USER ID](https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/doc/LINE.md)
-2. 取得 [LINE_MESSAGING_API_ACCESS_TOKEN](https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/doc/LINE.md)
-3. 取得 [LINE_NOTIFY_CHANNEL_ACCESS_TOKEN](https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/doc/LINE.md)
-4. 取得 [UPLOAD_JS_TOKEN](https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/doc/UPLOAD_JS.md)
+1. 取得 [LINE USER ID](https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/doc/LINE.md)
+2. 取得 [LINE_MESSAGING_API_ACCESS_TOKEN](https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/doc/LINE.md)
+3. 取得 [LINE_NOTIFY_CHANNEL_ACCESS_TOKEN](https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/doc/LINE.md)
+4. 取得 [UPLOAD_JS_TOKEN](https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/doc/UPLOAD_JS.md)
 
 ### step 2-2:
 
@@ -29,7 +29,7 @@
 // @require      https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js
 // @require      https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js
-// @require      https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/dist/werp.bundle.js
+// @require      https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/dist/werp.bundle.js
 // @icon         https://cy.iwerp.net/portal/images/chungyo.ico
 // @grant        GM_getValue
 // @grant        GM_setValue
@@ -53,18 +53,18 @@ GM_setValue('LINE_NOTIFY_CHANNEL_ACCESS_TOKEN', '');
 GM_setValue('UPLOAD_JS_TOKEN', '');
 ```
 
-![image](https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/dist/images/wrep-step2.png)
+![image](https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/dist/images/wrep-step2.png)
 
 ### step 3:
 
 繼續 step 2-2，點擊「編輯器」旁邊的「設定」分頁勾選檢查更新
 
-備註：「更新網址」如果為空則貼上 https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/dist/werp.bundle.js
+備註：「更新網址」如果為空則貼上 https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/dist/werp.bundle.js
 
-![image](https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/dist/images/wrep-step3.png)
+![image](https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/dist/images/wrep-step3.png)
 
 
 ### step 4:
 點擊最上層的「設定」(跟 step 3 的設定不同！)，找到外部的「更新週期」，選擇「永遠」即可
 
-![image](https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/dist/images/wrep-step4.png)
+![image](https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/dist/images/wrep-step4.png)

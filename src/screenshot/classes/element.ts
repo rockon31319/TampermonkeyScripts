@@ -19,7 +19,7 @@ export const createGithubLink = (): HTMLAnchorElement => {
     const githubLinkElement: HTMLAnchorElement = document.createElement('a');
     githubLinkElement.id = 'github';
     githubLinkElement.className = 'bi bi-github';
-    githubLinkElement.href = 'https://github.com/kenny0960/TampermonkeyScripts/tree/master/src/screenshot';
+    githubLinkElement.href = 'https://github.com/rockon31319/TampermonkeyScripts/tree/master/src/screenshot';
     githubLinkElement.target = '_blank';
     return githubLinkElement;
 };

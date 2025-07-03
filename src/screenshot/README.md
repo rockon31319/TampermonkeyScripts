@@ -6,9 +6,9 @@
 
 ### step 2-1:
 
-1. 取得 [LINE USER ID](https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/doc/LINE.md)
-2. 取得 [LINE_MESSAGING_API_ACCESS_TOKEN](https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/doc/LINE.md)
-3. 取得 [UPLOAD_JS_TOKEN](https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/doc/UPLOAD_JS.md)
+1. 取得 [LINE USER ID](https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/doc/LINE.md)
+2. 取得 [LINE_MESSAGING_API_ACCESS_TOKEN](https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/doc/LINE.md)
+3. 取得 [UPLOAD_JS_TOKEN](https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/doc/UPLOAD_JS.md)
 
 ### step 2-2:
 
@@ -29,7 +29,7 @@
 // @require     https://code.jquery.com/ui/1.13.1/jquery-ui.min.js
 // @require     https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js
 // @require     https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js
-// @require     https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/dist/screenshot.bundle.js
+// @require     https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/dist/screenshot.bundle.js
 // @icon        https://pbs.twimg.com/profile_images/1305394576602013698/Tvz6UU5R_normal.jpg
 // @grant       GM_getValue
 // @grant       GM_addStyle
@@ -50,7 +50,7 @@ GM_setValue('UPLOAD_JS_TOKEN', '');
 
 繼續 step 2，點擊「編輯器」旁邊的「設定」分頁勾選檢查更新
 
-備註：「更新網址」如果為空則貼上 https://raw.githubusercontent.com/kenny0960/TampermonkeyScripts/master/dist/screenshot.bundle.js
+備註：「更新網址」如果為空則貼上 https://raw.githubusercontent.com/rockon31319/TampermonkeyScripts/master/dist/screenshot.bundle.js
 
 
 ### step 4:
