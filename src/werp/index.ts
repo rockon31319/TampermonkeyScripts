@@ -40,11 +40,34 @@ import { FUN_COMPANY_EMPLOYEE_COUNT } from '@/werp/consts/env';
 import { prependSendAnnouncementButtons } from '@/werp/classes/announcement';
 
 const getAttendanceByTr = (tr: HTMLTableRowElement): Attendance => {
-    // ['09/12 (一)', '09:38', '18:41']
-    const datetimeStrings: string[] = tr.innerText.split('\t');
-    const dateString: string = `${getPickedYear()}/${datetimeStrings[0].split(' ')[0]}`;
-    const signInDate: Moment = moment(`${dateString} ${datetimeStrings[1]}`);
-    const signOutDate: Moment = moment(`${dateString} ${datetimeStrings[2]}`);
+    const cells: NodeListOf<HTMLTableCellElement> = tr.querySelectorAll('td');
+
+    // 至少需要3個儲存格來解析日期、簽到和簽退
+    if (cells.length < 3) {
+        return {
+            signInDate: moment.invalid(),
+            signOutDate: moment.invalid(),
+            leaveNote: defaultLeaveNote,
+        };
+    }
+
+    const datePart: string = cells[0].innerText.trim();
+    const signInTime: string = cells[1].innerText.trim();
+    const signOutTime: string = cells[2].innerText.trim();
+
+    // 如果日期或時間為空，則視為無效資料
+    if (datePart === '' || signInTime === '' || signOutTime === '') {
+        return {
+            signInDate: moment.invalid(),
+            signOutDate: moment.invalid(),
+            leaveNote: defaultLeaveNote,
+        };
+    }
+
+    const dateString: string = `${getPickedYear()}/${datePart.split(' ')[0]}`;
+    const signInDate: Moment = moment(`${dateString} ${signInTime}`);
+    const signOutDate: Moment = moment(`${dateString} ${signOutTime}`);
+
     return {
         signInDate,
         signOutDate,
@@ -58,6 +81,11 @@ const getAttendanceByTrs = (trs: HTMLCollectionOf<HTMLElementTagNameMap['tr']>, 
     for (let i = 0; i < trs.length; i++) {
         const tr: HTMLTableRowElement = trs[i];
         const attendance: Attendance = getAttendanceByTr(tr);
+
+        // 如果是無效的資料行，則跳過
+        if (attendance.signOutDate.isValid() === false) {
+            continue;
+        }
 
         // 無需計算上個禮拜
         if (/\([日|六]\)/.test(tr.innerText) === true) {
